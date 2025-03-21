@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+img[alt="SCC BACKGROUND"] {
+    position: fixed;
+    top: 0;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%; 
+    height: auto;
+    max-height: 100vh; 
+    object-fit: cover;
+    z-index: -1; 
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: whitesmoke;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: green;
+    border-bottom: 3px solid green;
+}
+
+@media (max-width: 995px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease;
+    }
+
+    #menu-toggle:checked ~ .navbar {
+        right: 0;
+    }
+
+    .navbar a {
+        margin: 2rem 0;
+        font-size: 2.5rem;
+    }
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: transparent;
+    padding: 5rem 9%;
+    position: relative;
+    z-index: 1; 
+    margin-top: 15%; 
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: green;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 2rem;
+    line-height: 1.6; 
+    margin-bottom: 1.5rem; 
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    position: relative;
+    width: 25vw; 
+    border-radius: 50%;
+    box-shadow: 0 0 25px blue;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    transform: scale(1.1);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid green;
+    font-size: 2rem;
+    border-radius: 50%;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: green;
+    color: white;
+    transform: scale(1.1);
+}
+
+#skills {
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+}
+
+.skills-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.skill-info span {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: green;
+    border-radius: 10px;
+    text-align: right;
+    padding-right: 10px;
+    color: white;
+    font-size: 0.9rem;
+    line-height: 20px;
+    transition: width 0.5s ease-in-out;
+}
+
+#certificates {
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+}
+
+.certificate-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certificate {
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.certificate:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.certificate p {
+    font-size: 1.4rem;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#about {
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#about h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: white;
+    margin-top: -10rem; 
+}
+.about-content {
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: white;
+}
+
+.about-content p {
+    margin-bottom: 2rem;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 5rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+}
+
+section h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.social-icons-large {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.icon-box {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.icon-box a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.icon-box span {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column; 
+        gap: 3rem; 
+        margin-top: 20%; 
+        padding: 2rem 5%;
+    }
+
+    .home-img img {
+        width: 50vw; 
+    }
+
+    .home .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem; 
+    }
+
+    .home-content p {
+        font-size: 1.6rem; 
+    }
+
+    .social-icons {
+        gap: 1rem;
+    }
+
+    .social-icons a {
+        width: 3.5rem; 
+        height: 3.5rem;
+        font-size: 1.8rem;
+    }
+}
