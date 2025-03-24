@@ -94,34 +94,6 @@ header {
     border-bottom: 3px solid green;
 }
 
-@media (max-width: 995px) {
-    .menu-icon {
-        display: block;
-    }
-
-    .navbar {
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: right 0.3s ease;
-    }
-
-    #menu-toggle:checked ~ .navbar {
-        right: 0;
-    }
-
-    .navbar a {
-        margin: 2rem 0;
-        font-size: 2.5rem;
-    }
-}
-
 .home {
     display: flex;
     justify-content: center;
@@ -197,6 +169,36 @@ span {
     background-color: green;
     color: white;
     transform: scale(1.1);
+}
+
+#about {
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#about h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.about-content {
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: white;
+}
+
+.about-content p {
+    margin-bottom: 2rem;
 }
 
 #skills {
@@ -296,49 +298,11 @@ span {
     margin-top: 10px;
 }
 
-#about {
+#contacts {
     padding: 50px 20px;
     background-color: rgba(0, 0, 0, 0.7);
     position: relative;
     z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-#about h2 {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-    color: white;
-    margin-top: -10rem; 
-}
-.about-content {
-    max-width: 800px;
-    text-align: center;
-    font-size: 1.8rem;
-    line-height: 1.6;
-    color: white;
-}
-
-.about-content p {
-    margin-bottom: 2rem;
-}
-
-section {
-    min-height: 100vh;
-    padding: 10rem 9% 5rem;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: relative;
-    z-index: 1;
-}
-
-section h2 {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-    color: white;
 }
 
 .social-icons-large {
@@ -385,6 +349,34 @@ section h2 {
     color: white;
 }
 
+@media (max-width: 995px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease;
+    }
+
+    #menu-toggle:checked ~ .navbar {
+        right: 0;
+    }
+
+    .navbar a {
+        margin: 2rem 0;
+        font-size: 2.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .home {
         flex-direction: column; 
@@ -417,5 +409,16 @@ section h2 {
         width: 3.5rem; 
         height: 3.5rem;
         font-size: 1.8rem;
+    }
+
+    /* About section mobile fix */
+    #about {
+        padding-top: 15rem;
+        justify-content: flex-start;
+    }
+    
+    #about h2 {
+        margin-top: 5rem;
+        font-size: 3.5rem;
     }
 }
