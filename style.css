@@ -207,11 +207,16 @@ span {
     position: relative;
     z-index: 1;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #project h2 {
     font-size: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     color: white;
 }
 
@@ -220,11 +225,23 @@ span {
     background-color: rgba(0, 0, 0, 0.7);
     position: relative;
     z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    color: white;
 }
 
 .skills-container {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
 }
 
 .skill {
@@ -244,7 +261,7 @@ span {
 }
 
 .skill-info span {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     color: white;
 }
 
@@ -263,7 +280,7 @@ span {
     text-align: right;
     padding-right: 10px;
     color: white;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     line-height: 20px;
     transition: width 0.5s ease-in-out;
 }
@@ -273,6 +290,18 @@ span {
     background-color: rgba(0, 0, 0, 0.7);
     position: relative;
     z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#certificates h2 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    color: white;
 }
 
 .certificate-container {
@@ -281,11 +310,11 @@ span {
     justify-content: center;
     gap: 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .certificate {
-    width: 200px;
+    width: 250px;
     height: auto;
     overflow: hidden;
     border-radius: 10px;
@@ -301,15 +330,16 @@ span {
 }
 
 .certificate:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .certificate p {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: white;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
+    padding: 0 10px;
 }
 
 #contacts {
@@ -317,19 +347,33 @@ span {
     background-color: rgba(0, 0, 0, 0.7);
     position: relative;
     z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#contacts h2 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    color: white;
 }
 
 .social-icons-large {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
     margin-top: 2rem;
+    width: 100%;
+    max-width: 800px;
 }
 
 .icon-box {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -350,17 +394,19 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
 }
 
 .icon-box i {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 45px;
+    margin-bottom: 15px;
 }
 
 .icon-box span {
-    font-size: 14px;
+    font-size: 1.6rem;
     font-weight: 500;
-    color: white;
 }
 
 @media (max-width: 995px) {
@@ -392,7 +438,6 @@ span {
 }
 
 @media (max-width: 768px) {
-    /* Home Section Mobile */
     .home {
         flex-direction: column; 
         gap: 3rem; 
@@ -425,14 +470,12 @@ span {
         height: 3.5rem;
         font-size: 1.8rem;
     }
-    
+
     #about {
         padding-top: 15rem;
-        justify-content: flex-start;
     }
     
     #about h2 {
-        margin-top: 5rem;
         font-size: 3.5rem;
     }
 
@@ -441,41 +484,64 @@ span {
         padding: 0 2rem;
     }
 
+    #project {
+        padding-top: 15rem;
+    }
+    
     #project h2 {
         font-size: 3.5rem;
-        margin-top: 5rem;
     }
 
-    .skills-container {
-        padding: 0 2rem;
+    #skills {
+        padding-top: 15rem;
     }
-
+    
+    #skills h2 {
+        font-size: 3.5rem;
+    }
+    
     .skill-info span {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
-
+    
+    #certificates {
+        padding-top: 15rem;
+    }
+    
+    #certificates h2 {
+        font-size: 3.5rem;
+    }
+    
     .certificate {
         width: 150px;
     }
 
     .certificate p {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
+    #contacts {
+        padding-top: 15rem;
+    }
+    
+    #contacts h2 {
+        font-size: 3.5rem;
+    }
+    
     .social-icons-large {
         gap: 15px;
     }
-
+    
     .icon-box {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
     }
 
     .icon-box i {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .icon-box span {
-        font-size: 12px;
+        font-size: 1.4rem;
     }
 }
