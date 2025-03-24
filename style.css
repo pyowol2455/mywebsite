@@ -31,7 +31,7 @@ img[alt="SCC BACKGROUND"] {
     transform: translateX(-50%); 
     width: 100%; 
     height: auto;
-    max-height: 50vh; 
+    max-height: 100vh; 
     object-fit: cover;
     z-index: -1; 
 }
@@ -543,20 +543,5 @@ span {
 
     .icon-box span {
         font-size: 1.4rem;
-    }
-}
-
-@media (min-width: 769px) {
-    .home {
-        margin-top: 20%;
-        padding-top: 8rem; 
-    }
-    
-    .home-img img {
-        margin-top: 2rem; 
-    }
-    
-    .home-content {
-        margin-top: 2rem; 
     }
 }
