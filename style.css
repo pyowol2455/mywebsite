@@ -545,3 +545,19 @@ span {
         font-size: 1.4rem;
     }
 }
+
+/* Add this to your CSS file */
+@media (min-width: 769px) {
+    .home {
+        margin-top: 20%; /* Increased from 15% to push content lower */
+        padding-top: 8rem; /* Added more padding at the top */
+    }
+    
+    .home-img img {
+        margin-top: 2rem; /* Lowers the profile picture */
+    }
+    
+    .home-content {
+        margin-top: 2rem; /* Lowers the text content */
+    }
+}
