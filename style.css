@@ -27,13 +27,13 @@ body {
 img[alt="SCC BACKGROUND"] {
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100vh;
-    object-fit: top;
-    object-position: center 20%;
-    z-index: -1;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%; 
+    height: auto;
+    max-height: 100vh; 
+    object-fit: cover;
+    z-index: -1; 
 }
 
 header {
