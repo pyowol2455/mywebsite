@@ -201,6 +201,20 @@ span {
     margin-bottom: 2rem;
 }
 
+#project {
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+}
+
+#project h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
 #skills {
     padding: 50px 20px;
     background-color: rgba(0, 0, 0, 0.7);
@@ -378,6 +392,7 @@ span {
 }
 
 @media (max-width: 768px) {
+    /* Home Section Mobile */
     .home {
         flex-direction: column; 
         gap: 3rem; 
@@ -410,8 +425,7 @@ span {
         height: 3.5rem;
         font-size: 1.8rem;
     }
-
-    /* About section mobile fix */
+    
     #about {
         padding-top: 15rem;
         justify-content: flex-start;
@@ -420,5 +434,48 @@ span {
     #about h2 {
         margin-top: 5rem;
         font-size: 3.5rem;
+    }
+
+    .about-content {
+        font-size: 1.6rem;
+        padding: 0 2rem;
+    }
+
+    #project h2 {
+        font-size: 3.5rem;
+        margin-top: 5rem;
+    }
+
+    .skills-container {
+        padding: 0 2rem;
+    }
+
+    .skill-info span {
+        font-size: 1.4rem;
+    }
+
+    .certificate {
+        width: 150px;
+    }
+
+    .certificate p {
+        font-size: 1.2rem;
+    }
+
+    .social-icons-large {
+        gap: 15px;
+    }
+
+    .icon-box {
+        width: 100px;
+        height: 100px;
+    }
+
+    .icon-box i {
+        font-size: 30px;
+    }
+
+    .icon-box span {
+        font-size: 12px;
     }
 }
